@@ -8,16 +8,16 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: sans-serif;
-    /* overflow: hidden; */
+    /*overflow: hidden;*/
     background-color: #F9F9F9;
 }
 
 .layout {
     position: relative;
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
-    grid-template-areas:
-        "left main right";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
 }
@@ -39,7 +39,10 @@ html, body {
 
 /* Left Sidebar */
 .sidebar-left {
-    grid-area: left;
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +52,10 @@ html, body {
 
 /* Right Sidebar */
 .sidebar-right {
-    grid-area: right;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,10 +65,11 @@ html, body {
 
 /* Center Content */
 .main-content {
-    grid-area: main;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* если нужно вертикальное расположение */
+    text-align: center;
 }
 
 .main-content_picture {
@@ -88,6 +95,10 @@ html, body {
 }
 
 .action-btn {
+    position: fixed;
+    z-index: 1000;
+    bottom: 16px;
+    right: 16px;
     padding: 14px 24px;
     display: flex;
     align-items: center;
@@ -141,7 +152,13 @@ html, body {
 
 @media (max-width: 1000px) {
     .banner-img {
-        width: 85%;
+        width: 65%;
+    }
+}
+
+@media (max-width: 680px) {
+    .banner-img {
+        width: 90%;
     }
 }
 
@@ -150,17 +167,14 @@ html, body {
         width: 100%;
     }
 
-    .layout {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    /*.layout {*/
+    /*    width: 97vw;*/
+    /*}*/
 
     .header {
-        position: relative;
         left: auto;
-        top: auto;
-        padding: 16px 16px;
+        width: 100vw;
+        padding: 0 16px;
         display: flex;
         justify-content: space-between;
     }
@@ -177,17 +191,16 @@ html, body {
         display: none;
     }
 
-    .footer {
-        position: static;
-        bottom: auto;
-        right: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 18px;
+    .main-content {
+        padding-bottom: 80px;
     }
 
     .action-btn {
+        position: fixed;
+        z-index: 1100;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
         width: 90vw;
     }
 }
