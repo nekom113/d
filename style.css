@@ -167,10 +167,6 @@ html, body {
         width: 100%;
     }
 
-    /*.layout {*/
-    /*    width: 97vw;*/
-    /*}*/
-
     .header {
         left: auto;
         width: 100vw;
@@ -192,14 +188,12 @@ html, body {
     }
 
     .main-content {
-        padding-bottom: 80px;
+        padding: 60px 0 90px;
     }
 
     .action-btn {
         position: fixed;
         z-index: 1100;
-        right: 0;
-        left: 0;
         margin: 0 auto;
         width: 90vw;
     }
