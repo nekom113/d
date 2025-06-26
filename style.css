@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+    background-color: #F9F9F9;
+}
+
+.layout {
+    postion: relative;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-areas:
+        "left main right";
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-btn {
+    display: none;
+}
+
+/* Left Sidebar */
+.sidebar-left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Center Content */
+.main-content {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content_picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img {
+    width: 45%;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    z-index: 10;
+    bottom: 16px;
+    right: 16px;
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.action-btn {
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    font-variation-settings: 'slnt' 0;
+    letter-spacing: 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #2681CC;
+}
+
+.action-btn:active {
+    background-color: #1C6199;
+}
+
+/* Icon Buttons */
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1440px) {
+    .action-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 10px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .banner-img {
+        width: 85%;
+    }
+}
+
+@media (max-width: 490px) {
+    .banner-img {
+        width: 100%;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header {
+        position: relative;
+        left: auto;
+        top: auto;
+        padding: 16px 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-btn {
+        display: block;
+    }
+
+    .sidebar-left {
+        display: none;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+
+    .footer {
+        position: static;
+        bottom: auto;
+        right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 18px;
+    }
+
+    .action-btn {
+        width: 90vw;
+    }
+}

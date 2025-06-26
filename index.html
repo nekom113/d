@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+    <header class="header">
+        <button class="icon-btn header-btn"><img src="public/icons/add_24.svg" alt="add-btn"></button>
+        <img src="public/logo.svg" alt="diom" class="logo">
+        <button class="icon-btn header-btn"><img src="public/icons/burger_24.svg" alt="burger-btn"></button>
+
+    </header>
+
+    <aside class="sidebar-left">
+        <button class="icon-btn"><img src="public/icons/add_24.svg" alt="add-btn"></button>
+        <button class="icon-btn"><img src="public/icons/feed_24.svg" alt="feed-btn"></button>
+        <button class="icon-btn"><img src="public/icons/hub_24.svg" alt="hub-btn"></button>
+        <button class="icon-btn"><img src="public/icons/subscriptions_24.svg" alt="sub-btn"></button>
+    </aside>
+
+    <main class="main-content">
+        <picture class="main-content_picture">
+            <!-- Мобильное изображение (до 480px) -->
+            <source srcset="public/images/banners/banner-mobile.png" media="(max-width: 480px)">
+            <!-- Десктопное изображение (по умолчанию) -->
+            <img src="public/images/banners/banner-desktop.png" alt="Увидимся в сентябре" class="banner-img">
+        </picture>
+    </main>
+
+    <aside class="sidebar-right">
+        <button class="icon-btn"><img src="public/icons/arrow_up_40.svg" alt="arrow_u-btn"></button>
+        <button class="icon-btn"><img src="public/icons/arrow_down_40.svg" alt="arrow_d-btn"></button>
+    </aside>
+
+    <footer class="footer">
+        <a href="#" class="action-btn"><img src="public/icons/telegram-Icon_32.svg" alt="telegram-btn">Следите за новостями</a>
+    </footer>
+</div>
+</body>
+</html>
